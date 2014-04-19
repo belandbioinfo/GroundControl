@@ -25,8 +25,12 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
         fileName <- paste(fileID,".csv",sep="")
         data <- read.table(fileName)
         naValues <- is.na(data$pollutant)
-        goodValues <- data[!naValues]
+        goodValues <- data$pollutant[!naValues]
     }
 
-    vectorToMean <-  
+    for (idNum in id) {
+        fullVector <- c(fullVector,getValues(idNum))
+    }  
+
+    fullMean <- mean(fullVector)
 }
