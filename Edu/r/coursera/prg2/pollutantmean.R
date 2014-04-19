@@ -1,3 +1,11 @@
+"""function named 'pollutantmean' that calculates the mean of a pollutant 
+(sulfate or nitrate) across a specified list of monitors.
+
+Author: Kevin Beland (belandbioinfo@gmail.com)
+Assignment 2 Part 1
+
+"""
+
 pollutantmean <- function(directory, pollutant, id = 1:332) {
     ## 'directory' is a character vector of length 1 indicating
     ## the location of the CSV files
