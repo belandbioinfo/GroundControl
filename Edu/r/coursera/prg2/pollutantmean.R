@@ -24,7 +24,7 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
     getValues <- function(fileID) {
         fileName <- paste(fileID,".csv",sep="")
         data <- read.table(fileName)
-        naValues <- is.na(data$pollutant)
+        naValues <- is.null(data$pollutant)
         goodValues <- data$pollutant[!naValues]
     }
     
