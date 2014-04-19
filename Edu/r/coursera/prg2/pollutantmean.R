@@ -19,4 +19,14 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
 
     ## Return the mean of the pollutant across all monitors list
     ## in the 'id' vector (ignoring NA values)
+    
+    # This function returns the no null values from a specified file id
+    getValues <- function(fileID) {
+        fileName <- paste(fileID,".csv",sep="")
+        data <- read.table(fileName)
+        naValues <- is.na(data$pollutant)
+        goodValues <- data[!naValues]
+    }
+
+    vectorToMean <-  
 }
