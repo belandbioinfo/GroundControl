@@ -23,9 +23,10 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
     # This function returns the no null values from a specified file id
     getValues <- function(fileID) {
         fileName <- paste(fileID,".csv",sep="")
-        data <- read.table(fileName)
-        naValues <- is.null(data$pollutant)
-        goodValues <- data$pollutant[!naValues]
+        data <- read.csv(fileName)
+        pRows <- data[[pollutant]]
+        naValues <- is.na(pRows)
+        goodValues <- data[[pollutant]][!naValues]
     }
     
     # This function takes the ID numeric vector supplied in argument
@@ -82,4 +83,6 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
 
     # Return the mean of all specified pollutant data
     fullMean <- mean(fullVector)
+
+    print(fullMean)
 }
