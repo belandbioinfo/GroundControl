@@ -1,2 +1,2 @@
-This directory contains scripts and programs created from educational 
+This directory contains programs and scripts created from educational 
 instruction or book examples.
