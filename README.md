@@ -12,7 +12,7 @@ cd GroundControl
 git remote add -f origin https://github.com/belandbioinfo/GroundControl/
 ```
 
-Then depending on the project do the following:
+Then depending on the project you would like to checkout do the following:
 
 For R Projects:  
 
