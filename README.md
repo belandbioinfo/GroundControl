@@ -10,6 +10,7 @@ and commited using Sparse Commit. Use the following to checkout only those proje
 git init GroundControl
 cd GroundControl
 git remote add -f origin https://github.com/belandbioinfo/GroundControl/
+git config core.sparsecheckout true
 ```
 
 Then depending on the project you would like to checkout do the following:
