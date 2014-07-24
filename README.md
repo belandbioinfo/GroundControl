@@ -6,28 +6,28 @@ for Bioinformatics workflows, programming tasks or education purposes.
 Directories at the root are used to delineate separate projects. They can be fetched
 and commited using Sparse Commit. Use the following to checkout only those projects:
 
-'''
+```
 git init GroundControl
 cd GroundControl
 git remote add -f origin https://github.com/belandbioinfo/GroundControl/
-'''
+```
 
 Then depending on the project do the following:
 
 _For R Projects:  
 
-'''
+```
 echo "Edu/r/" >> .git/info/sparse-checkout
-'''
+```
 
 _For CPP Projects:
 
-'''
+```
 echo "Edu/cpp/" >> .git/info/sparse-checkout
-'''
+```
 
-For BioInfo Python Scripts:
+For Bioinformatics related Python Scripts:
 
-'''
+```
 echo "Scripts/" >> .git/info/sparse-checkout
-'''
+```
