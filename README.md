@@ -7,7 +7,7 @@ Directories at the root are used to delineate separate projects. They can be fet
 and commited using Sparse Commit. Use the following to checkout only those projects:
 
 ```
-git init GroundControl
+git clone -n https://github.com/belandbioinfo/GroundControl/
 cd GroundControl
 git config core.sparsecheckout true
 git remote add -f origin https://github.com/belandbioinfo/GroundControl/
