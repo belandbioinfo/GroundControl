@@ -14,13 +14,13 @@ git remote add -f origin https://github.com/belandbioinfo/GroundControl/
 
 Then depending on the project do the following:
 
-_For R Projects:  
+For R Projects:  
 
 ```
 echo "Edu/r/" >> .git/info/sparse-checkout
 ```
 
-_For CPP Projects:
+For CPP Projects:
 
 ```
 echo "Edu/cpp/" >> .git/info/sparse-checkout
