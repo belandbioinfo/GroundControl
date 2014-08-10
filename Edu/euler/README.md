@@ -1,0 +1,1 @@
+This directory contains java programs written to solve various Project Euler problems.
