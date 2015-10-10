@@ -23,9 +23,6 @@ parser.add_option("-u", "--url",
 
 print options
 
-print platform.system()
-exit(0)
-
 # Initialize options passed to script
 url = options.url
 outputfile = options.filename
