@@ -1,0 +1,351 @@
+Function "BOOST_CHECK" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) [answered N; input not from terminal]
+.gdbinit:6: Error in sourced command file:
+Argument required (one or more breakpoint numbers).
+Breakpoint 1 at 0x8059e80: file test_Vec.cpp, line 11.
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x08059e80 in constructors_test(int) at test_Vec.cpp:11
+        bt
+        continue
+
+Breakpoint 1, constructors_test (val=1) at test_Vec.cpp:11
+warning: Source file is more recent than executable.
+11	{
+#0  constructors_test (val=1) at test_Vec.cpp:11
+#1  0x0804ddd8 in boost::unit_test::ut_detail::invoker<boost::unit_test::ut_detail::unused>::invoke<void (*)(int), int> (this=<optimized out>, f=<optimized out>, t1=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:58
+#2  boost::unit_test::ut_detail::callback1_impl_t<boost::unit_test::ut_detail::unused, int, void (*)(int)>::invoke (t1=<optimized out>, this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:147
+#3  boost::unit_test::callback1<int, boost::unit_test::ut_detail::unused>::operator() (t1=<optimized out>, this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:176
+#4  boost::unit_test::ut_detail::test_func_with_bound_param<int>::operator() (this=<optimized out>) at /usr/include/boost/test/parameterized_test.hpp:61
+#5  boost::unit_test::ut_detail::invoker<boost::unit_test::ut_detail::unused>::invoke<boost::unit_test::ut_detail::test_func_with_bound_param<int> > (this=<optimized out>, f=...) at /usr/include/boost/test/utils/callback.hpp:56
+#6  boost::unit_test::ut_detail::callback0_impl_t<boost::unit_test::ut_detail::unused, boost::unit_test::ut_detail::test_func_with_bound_param<int> >::invoke (this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:89
+#7  boost::unit_test::callback0<boost::unit_test::ut_detail::unused>::operator() (this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:118
+#8  boost::unit_test::(anonymous namespace)::zero_return_wrapper_t<boost::unit_test::callback0<boost::unit_test::ut_detail::unused> >::operator() (this=0x80ac95c) at /usr/include/boost/test/impl/unit_test_monitor.ipp:41
+#9  boost::unit_test::ut_detail::invoker<int>::invoke<boost::unit_test::(anonymous namespace)::zero_return_wrapper_t<boost::unit_test::callback0<> > > (this=<optimized out>, f=...) at /usr/include/boost/test/utils/callback.hpp:42
+#10 boost::unit_test::ut_detail::callback0_impl_t<int, boost::unit_test::(anonymous namespace)::zero_return_wrapper_t<boost::unit_test::callback0<boost::unit_test::ut_detail::unused> > >::invoke (this=0x80ac958) at /usr/include/boost/test/utils/callback.hpp:89
+#11 0x0804f905 in boost::unit_test::callback0<int>::operator() (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>) at /usr/include/boost/test/utils/callback.hpp:118
+#12 boost::detail::do_invoke<boost::scoped_ptr<boost::detail::translate_exception_base>, boost::unit_test::callback0<int> > (F=..., tr=...) at /usr/include/boost/test/impl/execution_monitor.ipp:281
+#13 boost::execution_monitor::catch_signals (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>, F=...) at /usr/include/boost/test/impl/execution_monitor.ipp:885
+#14 0x08052212 in boost::execution_monitor::execute (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>, F=...) at /usr/include/boost/test/impl/execution_monitor.ipp:1211
+#15 0x0805592d in boost::unit_test::unit_test_monitor_t::execute_and_translate (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>, tc=...) at /usr/include/boost/test/impl/unit_test_monitor.ipp:69
+#16 0x08075a8b in boost::unit_test::framework_impl::visit (this=0x80a21a0 <boost::unit_test::(anonymous namespace)::s_frk_impl()::the_inst>, tc=...) at /usr/include/boost/test/impl/framework.ipp:156
+#17 0x0804d8b9 in boost::unit_test::traverse_test_tree (tc=..., V=...) at /usr/include/boost/test/impl/unit_test_suite.ipp:193
+#18 0x0805de7b in boost::unit_test::traverse_test_tree (suite=..., V=...) at /usr/include/boost/test/impl/unit_test_suite.ipp:207
+#19 0x0805e92f in boost::unit_test::framework::run (id=1, continue_test=true) at /usr/include/boost/test/impl/framework.ipp:442
+#20 0x08065558 in boost::unit_test::unit_test_main (init_func=0x8053820 <init_unit_test_suite(int, char**)>, argc=1, argv=0xbffff0f4) at /usr/include/boost/test/impl/unit_test_main.ipp:185
+#21 0x0804caf0 in main (argc=1, argv=0xbffff0f4) at /usr/include/boost/test/impl/unit_test_main.ipp:237
+
+Breakpoint 1, constructors_test (val=4) at test_Vec.cpp:11
+11	{
+#0  constructors_test (val=4) at test_Vec.cpp:11
+#1  0x0804ddd8 in boost::unit_test::ut_detail::invoker<boost::unit_test::ut_detail::unused>::invoke<void (*)(int), int> (this=<optimized out>, f=<optimized out>, t1=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:58
+#2  boost::unit_test::ut_detail::callback1_impl_t<boost::unit_test::ut_detail::unused, int, void (*)(int)>::invoke (t1=<optimized out>, this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:147
+#3  boost::unit_test::callback1<int, boost::unit_test::ut_detail::unused>::operator() (t1=<optimized out>, this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:176
+#4  boost::unit_test::ut_detail::test_func_with_bound_param<int>::operator() (this=<optimized out>) at /usr/include/boost/test/parameterized_test.hpp:61
+#5  boost::unit_test::ut_detail::invoker<boost::unit_test::ut_detail::unused>::invoke<boost::unit_test::ut_detail::test_func_with_bound_param<int> > (this=<optimized out>, f=...) at /usr/include/boost/test/utils/callback.hpp:56
+#6  boost::unit_test::ut_detail::callback0_impl_t<boost::unit_test::ut_detail::unused, boost::unit_test::ut_detail::test_func_with_bound_param<int> >::invoke (this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:89
+#7  boost::unit_test::callback0<boost::unit_test::ut_detail::unused>::operator() (this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:118
+#8  boost::unit_test::(anonymous namespace)::zero_return_wrapper_t<boost::unit_test::callback0<boost::unit_test::ut_detail::unused> >::operator() (this=0x80ac95c) at /usr/include/boost/test/impl/unit_test_monitor.ipp:41
+#9  boost::unit_test::ut_detail::invoker<int>::invoke<boost::unit_test::(anonymous namespace)::zero_return_wrapper_t<boost::unit_test::callback0<> > > (this=<optimized out>, f=...) at /usr/include/boost/test/utils/callback.hpp:42
+#10 boost::unit_test::ut_detail::callback0_impl_t<int, boost::unit_test::(anonymous namespace)::zero_return_wrapper_t<boost::unit_test::callback0<boost::unit_test::ut_detail::unused> > >::invoke (this=0x80ac958) at /usr/include/boost/test/utils/callback.hpp:89
+#11 0x0804f905 in boost::unit_test::callback0<int>::operator() (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>) at /usr/include/boost/test/utils/callback.hpp:118
+#12 boost::detail::do_invoke<boost::scoped_ptr<boost::detail::translate_exception_base>, boost::unit_test::callback0<int> > (F=..., tr=...) at /usr/include/boost/test/impl/execution_monitor.ipp:281
+#13 boost::execution_monitor::catch_signals (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>, F=...) at /usr/include/boost/test/impl/execution_monitor.ipp:885
+#14 0x08052212 in boost::execution_monitor::execute (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>, F=...) at /usr/include/boost/test/impl/execution_monitor.ipp:1211
+#15 0x0805592d in boost::unit_test::unit_test_monitor_t::execute_and_translate (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>, tc=...) at /usr/include/boost/test/impl/unit_test_monitor.ipp:69
+#16 0x08075a8b in boost::unit_test::framework_impl::visit (this=0x80a21a0 <boost::unit_test::(anonymous namespace)::s_frk_impl()::the_inst>, tc=...) at /usr/include/boost/test/impl/framework.ipp:156
+#17 0x0804d8b9 in boost::unit_test::traverse_test_tree (tc=..., V=...) at /usr/include/boost/test/impl/unit_test_suite.ipp:193
+#18 0x0805de7b in boost::unit_test::traverse_test_tree (suite=..., V=...) at /usr/include/boost/test/impl/unit_test_suite.ipp:207
+#19 0x0805e92f in boost::unit_test::framework::run (id=1, continue_test=true) at /usr/include/boost/test/impl/framework.ipp:442
+#20 0x08065558 in boost::unit_test::unit_test_main (init_func=0x8053820 <init_unit_test_suite(int, char**)>, argc=1, argv=0xbffff0f4) at /usr/include/boost/test/impl/unit_test_main.ipp:185
+#21 0x0804caf0 in main (argc=1, argv=0xbffff0f4) at /usr/include/boost/test/impl/unit_test_main.ipp:237
+
+Breakpoint 1, constructors_test (val=10) at test_Vec.cpp:11
+11	{
+#0  constructors_test (val=10) at test_Vec.cpp:11
+#1  0x0804ddd8 in boost::unit_test::ut_detail::invoker<boost::unit_test::ut_detail::unused>::invoke<void (*)(int), int> (this=<optimized out>, f=<optimized out>, t1=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:58
+#2  boost::unit_test::ut_detail::callback1_impl_t<boost::unit_test::ut_detail::unused, int, void (*)(int)>::invoke (t1=<optimized out>, this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:147
+#3  boost::unit_test::callback1<int, boost::unit_test::ut_detail::unused>::operator() (t1=<optimized out>, this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:176
+#4  boost::unit_test::ut_detail::test_func_with_bound_param<int>::operator() (this=<optimized out>) at /usr/include/boost/test/parameterized_test.hpp:61
+#5  boost::unit_test::ut_detail::invoker<boost::unit_test::ut_detail::unused>::invoke<boost::unit_test::ut_detail::test_func_with_bound_param<int> > (this=<optimized out>, f=...) at /usr/include/boost/test/utils/callback.hpp:56
+#6  boost::unit_test::ut_detail::callback0_impl_t<boost::unit_test::ut_detail::unused, boost::unit_test::ut_detail::test_func_with_bound_param<int> >::invoke (this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:89
+#7  boost::unit_test::callback0<boost::unit_test::ut_detail::unused>::operator() (this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:118
+#8  boost::unit_test::(anonymous namespace)::zero_return_wrapper_t<boost::unit_test::callback0<boost::unit_test::ut_detail::unused> >::operator() (this=0x80ac95c) at /usr/include/boost/test/impl/unit_test_monitor.ipp:41
+#9  boost::unit_test::ut_detail::invoker<int>::invoke<boost::unit_test::(anonymous namespace)::zero_return_wrapper_t<boost::unit_test::callback0<> > > (this=<optimized out>, f=...) at /usr/include/boost/test/utils/callback.hpp:42
+#10 boost::unit_test::ut_detail::callback0_impl_t<int, boost::unit_test::(anonymous namespace)::zero_return_wrapper_t<boost::unit_test::callback0<boost::unit_test::ut_detail::unused> > >::invoke (this=0x80ac958) at /usr/include/boost/test/utils/callback.hpp:89
+#11 0x0804f905 in boost::unit_test::callback0<int>::operator() (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>) at /usr/include/boost/test/utils/callback.hpp:118
+#12 boost::detail::do_invoke<boost::scoped_ptr<boost::detail::translate_exception_base>, boost::unit_test::callback0<int> > (F=..., tr=...) at /usr/include/boost/test/impl/execution_monitor.ipp:281
+#13 boost::execution_monitor::catch_signals (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>, F=...) at /usr/include/boost/test/impl/execution_monitor.ipp:885
+#14 0x08052212 in boost::execution_monitor::execute (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>, F=...) at /usr/include/boost/test/impl/execution_monitor.ipp:1211
+#15 0x0805592d in boost::unit_test::unit_test_monitor_t::execute_and_translate (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>, tc=...) at /usr/include/boost/test/impl/unit_test_monitor.ipp:69
+#16 0x08075a8b in boost::unit_test::framework_impl::visit (this=0x80a21a0 <boost::unit_test::(anonymous namespace)::s_frk_impl()::the_inst>, tc=...) at /usr/include/boost/test/impl/framework.ipp:156
+#17 0x0804d8b9 in boost::unit_test::traverse_test_tree (tc=..., V=...) at /usr/include/boost/test/impl/unit_test_suite.ipp:193
+#18 0x0805de7b in boost::unit_test::traverse_test_tree (suite=..., V=...) at /usr/include/boost/test/impl/unit_test_suite.ipp:207
+#19 0x0805e92f in boost::unit_test::framework::run (id=1, continue_test=true) at /usr/include/boost/test/impl/framework.ipp:442
+#20 0x08065558 in boost::unit_test::unit_test_main (init_func=0x8053820 <init_unit_test_suite(int, char**)>, argc=1, argv=0xbffff0f4) at /usr/include/boost/test/impl/unit_test_main.ipp:185
+#21 0x0804caf0 in main (argc=1, argv=0xbffff0f4) at /usr/include/boost/test/impl/unit_test_main.ipp:237
+
+Breakpoint 1, constructors_test (val=3299) at test_Vec.cpp:11
+11	{
+#0  constructors_test (val=3299) at test_Vec.cpp:11
+#1  0x0804ddd8 in boost::unit_test::ut_detail::invoker<boost::unit_test::ut_detail::unused>::invoke<void (*)(int), int> (this=<optimized out>, f=<optimized out>, t1=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:58
+#2  boost::unit_test::ut_detail::callback1_impl_t<boost::unit_test::ut_detail::unused, int, void (*)(int)>::invoke (t1=<optimized out>, this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:147
+#3  boost::unit_test::callback1<int, boost::unit_test::ut_detail::unused>::operator() (t1=<optimized out>, this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:176
+#4  boost::unit_test::ut_detail::test_func_with_bound_param<int>::operator() (this=<optimized out>) at /usr/include/boost/test/parameterized_test.hpp:61
+#5  boost::unit_test::ut_detail::invoker<boost::unit_test::ut_detail::unused>::invoke<boost::unit_test::ut_detail::test_func_with_bound_param<int> > (this=<optimized out>, f=...) at /usr/include/boost/test/utils/callback.hpp:56
+#6  boost::unit_test::ut_detail::callback0_impl_t<boost::unit_test::ut_detail::unused, boost::unit_test::ut_detail::test_func_with_bound_param<int> >::invoke (this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:89
+#7  boost::unit_test::callback0<boost::unit_test::ut_detail::unused>::operator() (this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:118
+#8  boost::unit_test::(anonymous namespace)::zero_return_wrapper_t<boost::unit_test::callback0<boost::unit_test::ut_detail::unused> >::operator() (this=0x80ac95c) at /usr/include/boost/test/impl/unit_test_monitor.ipp:41
+#9  boost::unit_test::ut_detail::invoker<int>::invoke<boost::unit_test::(anonymous namespace)::zero_return_wrapper_t<boost::unit_test::callback0<> > > (this=<optimized out>, f=...) at /usr/include/boost/test/utils/callback.hpp:42
+#10 boost::unit_test::ut_detail::callback0_impl_t<int, boost::unit_test::(anonymous namespace)::zero_return_wrapper_t<boost::unit_test::callback0<boost::unit_test::ut_detail::unused> > >::invoke (this=0x80ac958) at /usr/include/boost/test/utils/callback.hpp:89
+#11 0x0804f905 in boost::unit_test::callback0<int>::operator() (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>) at /usr/include/boost/test/utils/callback.hpp:118
+#12 boost::detail::do_invoke<boost::scoped_ptr<boost::detail::translate_exception_base>, boost::unit_test::callback0<int> > (F=..., tr=...) at /usr/include/boost/test/impl/execution_monitor.ipp:281
+#13 boost::execution_monitor::catch_signals (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>, F=...) at /usr/include/boost/test/impl/execution_monitor.ipp:885
+#14 0x08052212 in boost::execution_monitor::execute (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>, F=...) at /usr/include/boost/test/impl/execution_monitor.ipp:1211
+#15 0x0805592d in boost::unit_test::unit_test_monitor_t::execute_and_translate (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>, tc=...) at /usr/include/boost/test/impl/unit_test_monitor.ipp:69
+#16 0x08075a8b in boost::unit_test::framework_impl::visit (this=0x80a21a0 <boost::unit_test::(anonymous namespace)::s_frk_impl()::the_inst>, tc=...) at /usr/include/boost/test/impl/framework.ipp:156
+#17 0x0804d8b9 in boost::unit_test::traverse_test_tree (tc=..., V=...) at /usr/include/boost/test/impl/unit_test_suite.ipp:193
+#18 0x0805de7b in boost::unit_test::traverse_test_tree (suite=..., V=...) at /usr/include/boost/test/impl/unit_test_suite.ipp:207
+#19 0x0805e92f in boost::unit_test::framework::run (id=1, continue_test=true) at /usr/include/boost/test/impl/framework.ipp:442
+#20 0x08065558 in boost::unit_test::unit_test_main (init_func=0x8053820 <init_unit_test_suite(int, char**)>, argc=1, argv=0xbffff0f4) at /usr/include/boost/test/impl/unit_test_main.ipp:185
+#21 0x0804caf0 in main (argc=1, argv=0xbffff0f4) at /usr/include/boost/test/impl/unit_test_main.ipp:237
+
+Breakpoint 1, constructors_test (val=9371) at test_Vec.cpp:11
+11	{
+#0  constructors_test (val=9371) at test_Vec.cpp:11
+#1  0x0804ddd8 in boost::unit_test::ut_detail::invoker<boost::unit_test::ut_detail::unused>::invoke<void (*)(int), int> (this=<optimized out>, f=<optimized out>, t1=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:58
+#2  boost::unit_test::ut_detail::callback1_impl_t<boost::unit_test::ut_detail::unused, int, void (*)(int)>::invoke (t1=<optimized out>, this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:147
+#3  boost::unit_test::callback1<int, boost::unit_test::ut_detail::unused>::operator() (t1=<optimized out>, this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:176
+#4  boost::unit_test::ut_detail::test_func_with_bound_param<int>::operator() (this=<optimized out>) at /usr/include/boost/test/parameterized_test.hpp:61
+#5  boost::unit_test::ut_detail::invoker<boost::unit_test::ut_detail::unused>::invoke<boost::unit_test::ut_detail::test_func_with_bound_param<int> > (this=<optimized out>, f=...) at /usr/include/boost/test/utils/callback.hpp:56
+#6  boost::unit_test::ut_detail::callback0_impl_t<boost::unit_test::ut_detail::unused, boost::unit_test::ut_detail::test_func_with_bound_param<int> >::invoke (this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:89
+#7  boost::unit_test::callback0<boost::unit_test::ut_detail::unused>::operator() (this=<optimized out>) at /usr/include/boost/test/utils/callback.hpp:118
+#8  boost::unit_test::(anonymous namespace)::zero_return_wrapper_t<boost::unit_test::callback0<boost::unit_test::ut_detail::unused> >::operator() (this=0x80ac95c) at /usr/include/boost/test/impl/unit_test_monitor.ipp:41
+#9  boost::unit_test::ut_detail::invoker<int>::invoke<boost::unit_test::(anonymous namespace)::zero_return_wrapper_t<boost::unit_test::callback0<> > > (this=<optimized out>, f=...) at /usr/include/boost/test/utils/callback.hpp:42
+#10 boost::unit_test::ut_detail::callback0_impl_t<int, boost::unit_test::(anonymous namespace)::zero_return_wrapper_t<boost::unit_test::callback0<boost::unit_test::ut_detail::unused> > >::invoke (this=0x80ac958) at /usr/include/boost/test/utils/callback.hpp:89
+#11 0x0804f905 in boost::unit_test::callback0<int>::operator() (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>) at /usr/include/boost/test/utils/callback.hpp:118
+#12 boost::detail::do_invoke<boost::scoped_ptr<boost::detail::translate_exception_base>, boost::unit_test::callback0<int> > (F=..., tr=...) at /usr/include/boost/test/impl/execution_monitor.ipp:281
+#13 boost::execution_monitor::catch_signals (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>, F=...) at /usr/include/boost/test/impl/execution_monitor.ipp:885
+#14 0x08052212 in boost::execution_monitor::execute (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>, F=...) at /usr/include/boost/test/impl/execution_monitor.ipp:1211
+#15 0x0805592d in boost::unit_test::unit_test_monitor_t::execute_and_translate (this=0x80a2598 <boost::unit_test::singleton<boost::unit_test::unit_test_monitor_t>::instance()::the_inst>, tc=...) at /usr/include/boost/test/impl/unit_test_monitor.ipp:69
+#16 0x08075a8b in boost::unit_test::framework_impl::visit (this=0x80a21a0 <boost::unit_test::(anonymous namespace)::s_frk_impl()::the_inst>, tc=...) at /usr/include/boost/test/impl/framework.ipp:156
+#17 0x0804d8b9 in boost::unit_test::traverse_test_tree (tc=..., V=...) at /usr/include/boost/test/impl/unit_test_suite.ipp:193
+#18 0x0805de7b in boost::unit_test::traverse_test_tree (suite=..., V=...) at /usr/include/boost/test/impl/unit_test_suite.ipp:207
+#19 0x0805e92f in boost::unit_test::framework::run (id=1, continue_test=true) at /usr/include/boost/test/impl/framework.ipp:442
+#20 0x08065558 in boost::unit_test::unit_test_main (init_func=0x8053820 <init_unit_test_suite(int, char**)>, argc=1, argv=0xbffff0f4) at /usr/include/boost/test/impl/unit_test_main.ipp:185
+#21 0x0804caf0 in main (argc=1, argv=0xbffff0f4) at /usr/include/boost/test/impl/unit_test_main.ipp:237
+[Inferior 1 (process 5561) exited with code 0311]
+Breakpoint 1 at 0x8059e80: file test_Vec.cpp, line 11.
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x08059e80 in constructors_test(int) at test_Vec.cpp:11
+        continue
+
+Breakpoint 1, constructors_test (val=1) at test_Vec.cpp:11
+warning: Source file is more recent than executable.
+11	{
+
+Breakpoint 1, constructors_test (val=4) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=10) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=3299) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=9371) at test_Vec.cpp:11
+11	{
+[Inferior 1 (process 5578) exited with code 0311]
+Breakpoint 1 at 0x8059e80: file test_Vec.cpp, line 11.
+.gdbinit:6: Error in sourced command file:
+Ambiguous command "w lengthunitsint": watch, wh, whatis, where, while, while-stepping, winheight, ws.
+Breakpoint 1 at 0x8059e80: file test_Vec.cpp, line 11.
+Breakpoint 1 at 0x8059e80: file test_Vec.cpp, line 11.
+.gdbinit:6: Error in sourced command file:
+No symbol "lengthunitsint" in current context.
+Breakpoint 1 at 0x8059e80: file test_Vec.cpp, line 11.
+.gdbinit:6: Error in sourced command file:
+No symbol "lengthunitsint" in current context.
+Breakpoint 1 at 0x8060b4b: file test_Vec.cpp, line 11.
+.gdbinit:6: Error in sourced command file:
+No symbol "lengthunitsint" in current context.
+Breakpoint 1 at 0x8060b4b: file test_Vec.cpp, line 11.
+.gdbinit:6: Error in sourced command file:
+No symbol "lengthunitsint" in current context.
+Breakpoint 1 at 0x8060b4b: file test_Vec.cpp, line 11.
+.gdbinit:6: Error in sourced command file:
+No symbol "vec" in current context.
+.gdbinit:5: Error in sourced command file:
+No symbol "vec" in current context.
+.gdbinit:5: Error in sourced command file:
+No symbol "vec" in current context.
+No symbol "vec" in current context.
+No symbol "symbols" in current context.
+No symbol "vec" in specified context.
+No symbol "lengthunitsint" in specified context.
+Starting program: /home/belandk/work/ac/11-ch/bk/test/Test_Vec 
+[Inferior 1 (process 5762) exited with code 0311]
+Breakpoint 1 at 0x8060b4b: file test_Vec.cpp, line 11.
+.gdbinit:6: Error in sourced command file:
+No symbol "lengthunitsint" in current context.
+Breakpoint 1 at 0x8060b4b: file test_Vec.cpp, line 11.
+.gdbinit:6: Error in sourced command file:
+No symbol "lengthunitsint" in current context.
+Breakpoint 1 at 0x8060b4b: file test_Vec.cpp, line 11.
+.gdbinit:6: Error in sourced command file:
+No symbol "lengthunitsint" in current context.
+No symbol "vec" in current context.
+Starting program: /home/belandk/work/ac/11-ch/bk/test/Test_Vec 
+
+Breakpoint 1, constructors_test (val=1) at test_Vec.cpp:11
+11	{
+$1 = {data = 0xbfffdfa8, avail = 0x8079266 <std::map<boost::unit_test::basic_cstring<char const>, boost::runtime::environment::rt_env_detail::variable_data, std::less<boost::unit_test::basic_cstring<char const> >, std::allocator<std::pair<boost::unit_test::basic_cstring<char const> const, boost::runtime::environment::rt_env_detail::variable_data> > >::~map()>, limit = 0xbfffe188, alloc = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}, <No data fields>}}
+$2 = 3221217163
+$3 = 135353864
+[Inferior 1 (process 5822) exited with code 0311]
+Breakpoint 1 at 0x8060b4b: file test_Vec.cpp, line 11.
+.gdbinit:7: Error in sourced command file:
+No symbol "lengthunitsint" in current context.
+Breakpoint 1 at 0x8060b4b: file test_Vec.cpp, line 11.
+
+Breakpoint 1, constructors_test (val=1) at test_Vec.cpp:11
+11	{
+Hardware watchpoint 2: lengthunitsint
+Hardware watchpoint 3: lengthunitsdouble
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x08060b4b in constructors_test(int) at test_Vec.cpp:11
+	breakpoint already hit 1 time
+2       hw watchpoint  keep y              lengthunitsint
+3       hw watchpoint  keep y              lengthunitsdouble
+        continue
+
+Breakpoint 1, constructors_test (val=1) at test_Vec.cpp:11
+11	{
+Breakpoint 1 at 0x8060b4b: file test_Vec.cpp, line 11.
+
+Breakpoint 1, constructors_test (val=1) at test_Vec.cpp:11
+11	{
+$1 = 3221217163
+$2 = 135353864
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x08060b4b in constructors_test(int) at test_Vec.cpp:11
+	breakpoint already hit 1 time
+        continue
+
+Breakpoint 1, constructors_test (val=1) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=4) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=10) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=3299) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=9371) at test_Vec.cpp:11
+11	{
+[Inferior 1 (process 5856) exited with code 0311]
+Breakpoint 1 at 0x8060b4b: file test_Vec.cpp, line 11.
+
+Breakpoint 1, constructors_test (val=1) at test_Vec.cpp:11
+11	{
+$1 = 3221217163
+$2 = 135353864
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x08060b4b in constructors_test(int) at test_Vec.cpp:11
+	breakpoint already hit 1 time
+        continue
+
+Breakpoint 1, constructors_test (val=1) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=4) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=10) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=3299) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=9371) at test_Vec.cpp:11
+11	{
+[Inferior 1 (process 5876) exited with code 0311]
+Breakpoint 1 at 0x8060b4b: file test_Vec.cpp, line 11.
+
+Breakpoint 1, constructors_test (val=1) at test_Vec.cpp:11
+11	{
+$1 = 3221217163
+$2 = 135353864
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x08060b4b in constructors_test(int) at test_Vec.cpp:11
+	breakpoint already hit 1 time
+        continue
+
+Breakpoint 1, constructors_test (val=1) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=4) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=10) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=3299) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=9371) at test_Vec.cpp:11
+11	{
+[Inferior 1 (process 5898) exited with code 0311]
+Breakpoint 1 at 0x8060b4b: file test_Vec.cpp, line 11.
+
+Breakpoint 1, constructors_test (val=1) at test_Vec.cpp:11
+11	{
+$1 = 3221217163
+$2 = 135353864
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x08060b4b in constructors_test(int) at test_Vec.cpp:11
+	breakpoint already hit 1 time
+        continue
+
+Breakpoint 1, constructors_test (val=1) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=4) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=10) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=3299) at test_Vec.cpp:11
+11	{
+
+Breakpoint 1, constructors_test (val=9371) at test_Vec.cpp:11
+11	{
+[Inferior 1 (process 5932) exited with code 0311]
+Breakpoint 1 at 0x8060b4b: file test_Vec.cpp, line 11.
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0804f02d in boost::unit_test::framework::get (id=1, t=boost::unit_test::tut_suite) at /usr/include/boost/test/impl/framework.ipp:388
+388	    if( (res->p_type & t) == 0 )
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x08060b4b in constructors_test(int) at test_Vec.cpp:11
+        continue
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0804f02d in boost::unit_test::framework::get (id=1, t=boost::unit_test::tut_suite) at /usr/include/boost/test/impl/framework.ipp:388
+388	    if( (res->p_type & t) == 0 )
+Breakpoint 1 at 0x8060b4b: file test_Vec.cpp, line 11.
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0804f02d in boost::unit_test::framework::get (id=1, t=boost::unit_test::tut_suite) at /usr/include/boost/test/impl/framework.ipp:388
+388	    if( (res->p_type & t) == 0 )
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x08060b4b in constructors_test(int) at test_Vec.cpp:11
+        bt
+        continue
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0804f02d in boost::unit_test::framework::get (id=1, t=boost::unit_test::tut_suite) at /usr/include/boost/test/impl/framework.ipp:388
+388	    if( (res->p_type & t) == 0 )
